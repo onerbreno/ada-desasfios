@@ -9,15 +9,16 @@ class Usuario {
   }
 
   login(username, password) {
+    if (this.#tentativas >= 3) {
+      return "Conta bloqueada, contate o suporte"
+    }
+    
     if (this.username === username && this.#password === password) {
       return "Login realizado com sucesso"
     }
     
     this.#tentativas++
 
-    if (this.#tentativas >= 3) {
-      return "Conta bloqueada, contate o suporte"
-    }
 
     return "Falha na autenticação"
   }
@@ -30,3 +31,4 @@ console.log(js.login("js", "123"))
 console.log(js.login("js", "123"))
 console.log(js.login("js", "123"))
 console.log(js.login("js", "123"))
+console.log(js.login("js", "myPassw0rd!"))
