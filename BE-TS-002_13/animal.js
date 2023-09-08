@@ -12,30 +12,29 @@ class Animal {
 }
 
 class Vaca extends Animal {
-  constructor(nome, som, onomatopeia) {
-    super(nome, som, onomatopeia)
+  constructor() {
+    super('vaca', 'mugir', 'muuuu')
   }
 }
 
 class Cavalo extends Animal {
-  constructor(nome, som, onomatopeia) {
-    super(nome, som, onomatopeia)
+  constructor() {
+    super('cavalo', 'relinchar', 'iiirrrrí')
   }
 }
 
 class Ovelha extends Animal {
-  constructor(nome, som, onomatopeia) {
-    super(nome, som, onomatopeia)
+  constructor() {
+    super('ovelha', 'berrar', 'méééé')
   }
 }
 
-const vaca1 = new Vaca('vaca', 'mugir', 'muuuu')
-
+const vaca1 = new Vaca()
 console.log(vaca1.sobre())
 
-const cavalo1 = new Vaca('cavalo', 'relinchar', 'iiirrrrí')
+const cavalo1 = new Vaca()
 console.log(cavalo1.sobre())
 
-const ovelha1 = new Vaca('ovelha', 'berrar', 'méééé')
+const ovelha1 = new Vaca()
 console.log(ovelha1.sobre())
 
