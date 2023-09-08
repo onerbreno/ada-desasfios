@@ -2,8 +2,12 @@ class Extrato {
   #extrato = []
 
   transacao(tipoTransacao, valor) {
-    const novaTransacao = {}
-    novaTransacao[tipoTransacao] = valor
+    // const novaTransacao = {}
+    // novaTransacao[tipoTransacao] = valor
+
+    const novaTransacao = {
+      [tipoTransacao]: valor
+    }
 
     this.#extrato.push(novaTransacao)
   }

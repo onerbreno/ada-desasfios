@@ -24,18 +24,18 @@ class Empresa {
   }
 }
 
-const cargo = new Cargo("Programador Javascript jr", 8000);
-const trabalhador1 = new Trabalhador("Mark", cargo);
-const trabalhador2 = new Trabalhador("Jeff", cargo);
-const empresa = new Empresa();
+const cargo = new Cargo("Programador Javascript jr", 8000)
+const trabalhador1 = new Trabalhador("Mark", cargo)
+const trabalhador2 = new Trabalhador("Jeff", cargo)
+const empresa = new Empresa()
 
-empresa.contratar(trabalhador1);
-empresa.contratar(trabalhador2);
+empresa.contratar(trabalhador1)
+empresa.contratar(trabalhador2)
 
-cargo.nome; // Programador Javascript jr
-trabalhador1.cargo.nome; // Programador Javascript jr
-trabalhador1.nome; // Mark
-trabalhador2.cargo.nome; // Programador Javascript jr
-trabalhador2.nome; // Jeff
+console.log(cargo.nome)
+console.log(trabalhador1.cargo.nome)
+console.log(trabalhador1.nome)
+console.log(trabalhador2.cargo.nome)
+console.log(trabalhador2.nome)
 
 console.log(empresa.listarFuncionarios())

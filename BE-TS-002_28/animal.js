@@ -11,7 +11,13 @@ class Corrida {
   }
 
   resultado() {
-    return this.listaAnimais.sort((a, b) => b.velocidade - a.velocidade).map(animal => animal.nome)
+    const animaisOrdenados = this.listaAnimais.slice().sort((a, b) => b.velocidade - a.velocidade)
+
+    const tresPrimeirosColocados = animaisOrdenados.slice(0, 3)
+
+    const nomesDosColocados = tresPrimeirosColocados.map(animal => animal.nome)
+
+    return nomesDosColocados
   }
 }
 
